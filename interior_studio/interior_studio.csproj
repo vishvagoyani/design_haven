@@ -1,0 +1,474 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1996F6E2-D8FC-4E89-A835-E77064257459}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>interior_studio</RootNamespace>
+    <AssemblyName>interior_studio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44384</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\design_haven.mdf" />
+    <Content Include="App_Data\design_haven_log.ldf">
+      <DependentUpon>design_haven.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="design_images\blog\author.png" />
+    <Content Include="design_images\blog\blog-single-1.jpg" />
+    <Content Include="design_images\blog\blog-single-2.jpg" />
+    <Content Include="design_images\blog\blog-single.jpg" />
+    <Content Include="design_images\blog\comment-1.png" />
+    <Content Include="design_images\blog\comment-2.png" />
+    <Content Include="design_images\blog\comment-3.png" />
+    <Content Include="design_images\blog\latest-b-v1-1.jpg" />
+    <Content Include="design_images\blog\latest-b-v1-2.jpg" />
+    <Content Include="design_images\blog\latest-b-v1-3.jpg" />
+    <Content Include="design_images\blog\latest-b-v2-1.jpg" />
+    <Content Include="design_images\blog\latest-b-v2-2.jpg" />
+    <Content Include="design_images\blog\latest-b-v2-3.jpg" />
+    <Content Include="design_images\blog\next-thumb-1.jpg" />
+    <Content Include="design_images\blog\prev-thumb-1.jpg" />
+    <Content Include="design_images\blog\v1-1.jpg" />
+    <Content Include="design_images\blog\v1-2.jpg" />
+    <Content Include="design_images\blog\v1-3.jpg" />
+    <Content Include="design_images\blog\v1-4.jpg" />
+    <Content Include="design_images\blog\v1-5.jpg" />
+    <Content Include="design_images\blog\v1-6.jpg" />
+    <Content Include="design_images\blog\v1-7.jpg" />
+    <Content Include="design_images\blog\v1-8.jpg" />
+    <Content Include="design_images\blog\v1-9.jpg" />
+    <Content Include="design_images\blog\v2-1.jpg" />
+    <Content Include="design_images\blog\v2-2.jpg" />
+    <Content Include="design_images\blog\v2-3.jpg" />
+    <Content Include="design_images\blog\v2-4.jpg" />
+    <Content Include="design_images\blog\v2-5.jpg" />
+    <Content Include="design_images\brand\1.png" />
+    <Content Include="design_images\brand\2.png" />
+    <Content Include="design_images\brand\3.png" />
+    <Content Include="design_images\brand\4.png" />
+    <Content Include="design_images\brand\5.png" />
+    <Content Include="design_images\brand\6.png" />
+    <Content Include="design_images\fevicon\apple-touch-icon.png" />
+    <Content Include="design_images\fevicon\favicon-16x16.png" />
+    <Content Include="design_images\fevicon\favicon-32x32.png" />
+    <Content Include="design_images\footer\brochures-1.jpg" />
+    <Content Include="design_images\footer\footer-logo.png" />
+    <Content Include="design_images\footer\footer-shape.png" />
+    <Content Include="design_images\footer\gallery-1.jpg" />
+    <Content Include="design_images\footer\gallery-2.jpg" />
+    <Content Include="design_images\footer\gallery-3.jpg" />
+    <Content Include="design_images\footer\gallery-4.jpg" />
+    <Content Include="design_images\footer\gallery-5.jpg" />
+    <Content Include="design_images\footer\gallery-6.jpg" />
+    <Content Include="design_images\footer\recent-news-1.jpg" />
+    <Content Include="design_images\footer\recent-news-2.jpg" />
+    <Content Include="design_images\footer\recent-news-3.jpg" />
+    <Content Include="design_images\home-pages\preloader-2.html" />
+    <Content Include="design_images\home-pages\preloader-3.html" />
+    <Content Include="design_images\home-pages\preloader-4.html" />
+    <Content Include="design_images\home-pages\preloader-5.html" />
+    <Content Include="design_images\icon\arrow-2.png" />
+    <Content Include="design_images\icon\arrow.png" />
+    <Content Include="design_images\icon\button-shape.png" />
+    <Content Include="design_images\icon\dropdown-menu-arrow.png" />
+    <Content Include="design_images\icon\home-1.png" />
+    <Content Include="design_images\icon\home.png" />
+    <Content Include="design_images\icon\k.png" />
+    <Content Include="design_images\icon\preloader.gif" />
+    <Content Include="design_images\icon\signature.png" />
+    <Content Include="design_images\icon\submenu-icon.png" />
+    <Content Include="design_images\parallax-background\coming-soon-bg.jpg" />
+    <Content Include="design_images\parallax-background\contact-details-bg.html" />
+    <Content Include="design_images\parallax-background\contact-info-box-bg.jpg" />
+    <Content Include="design_images\parallax-background\slogan-bg.jpg" />
+    <Content Include="design_images\parallax-background\why-choose-bg.jpg" />
+    <Content Include="design_images\parallax-background\working-bg.jpg" />
+    <Content Include="design_images\parallax-background\working-process-bg-style3.jpg" />
+    <Content Include="design_images\parallax-background\working-style2-bg.jpg" />
+    <Content Include="design_images\pattern\about-style3-bg.jpg" />
+    <Content Include="design_images\pattern\instagram-title-bg.png" />
+    <Content Include="design_images\pattern\project-description-pattern.jpg" />
+    <Content Include="design_images\pattern\project-info-patten.jpg" />
+    <Content Include="design_images\pattern\timer-area-bg.jpg" />
+    <Content Include="design_images\pattern\working-process-item-bg.png" />
+    <Content Include="design_images\pattern\working-process-item-hover-bg.png" />
+    <Content Include="design_images\projects\lat-pro-1.jpg" />
+    <Content Include="design_images\projects\lat-pro-2.jpg" />
+    <Content Include="design_images\projects\lat-pro-3.jpg" />
+    <Content Include="design_images\projects\lat-pro-4.jpg" />
+    <Content Include="design_images\projects\lat-pro-5.jpg" />
+    <Content Include="design_images\projects\lat-pro-v2-1.jpg" />
+    <Content Include="design_images\projects\lat-pro-v2-2.jpg" />
+    <Content Include="design_images\projects\lat-pro-v2-3.jpg" />
+    <Content Include="design_images\projects\lat-pro-v3-1.jpg" />
+    <Content Include="design_images\projects\lat-pro-v3-2.jpg" />
+    <Content Include="design_images\projects\lat-pro-v3-3.jpg" />
+    <Content Include="design_images\projects\lat-pro-v3-4.jpg" />
+    <Content Include="design_images\projects\project-single\image-gallery-1.jpg" />
+    <Content Include="design_images\projects\project-single\project-description-1.jpg" />
+    <Content Include="design_images\projects\project-single\project-info-1.jpg" />
+    <Content Include="design_images\projects\project-single\similar-pro-1.jpg" />
+    <Content Include="design_images\projects\project-single\similar-pro-2.jpg" />
+    <Content Include="design_images\projects\project-single\similar-pro-3.jpg" />
+    <Content Include="design_images\projects\project-single\similar-pro-4.jpg" />
+    <Content Include="design_images\projects\project-single\video-gallery-1.jpg" />
+    <Content Include="design_images\projects\v1-1.jpg" />
+    <Content Include="design_images\projects\v1-2.jpg" />
+    <Content Include="design_images\projects\v1-3.jpg" />
+    <Content Include="design_images\projects\v1-4.jpg" />
+    <Content Include="design_images\projects\v1-5.jpg" />
+    <Content Include="design_images\projects\v1-6.jpg" />
+    <Content Include="design_images\projects\v1-7.jpg" />
+    <Content Include="design_images\projects\v1-8.jpg" />
+    <Content Include="design_images\projects\v1-9.jpg" />
+    <Content Include="design_images\projects\v2-1.jpg" />
+    <Content Include="design_images\projects\v2-2.jpg" />
+    <Content Include="design_images\projects\v2-3.jpg" />
+    <Content Include="design_images\projects\v2-4.jpg" />
+    <Content Include="design_images\projects\v2-5.jpg" />
+    <Content Include="design_images\projects\v2-6.jpg" />
+    <Content Include="design_images\projects\v2-7.jpg" />
+    <Content Include="design_images\projects\v2-8.jpg" />
+    <Content Include="design_images\projects\v2-9.jpg" />
+    <Content Include="design_images\projects\v3-1.jpg" />
+    <Content Include="design_images\projects\v3-2.jpg" />
+    <Content Include="design_images\projects\v3-3.jpg" />
+    <Content Include="design_images\projects\v3-4.jpg" />
+    <Content Include="design_images\projects\v3-5.jpg" />
+    <Content Include="design_images\projects\v3-6.jpg" />
+    <Content Include="design_images\projects\v3-7.jpg" />
+    <Content Include="design_images\projects\v3-8.jpg" />
+    <Content Include="design_images\projects\v4-1.jpg" />
+    <Content Include="design_images\projects\v4-2.jpg" />
+    <Content Include="design_images\projects\v4-3.jpg" />
+    <Content Include="design_images\projects\v4-4.jpg" />
+    <Content Include="design_images\projects\v4-5.jpg" />
+    <Content Include="design_images\projects\v4-6.jpg" />
+    <Content Include="design_images\projects\v4-7.jpg" />
+    <Content Include="design_images\projects\v4-8.jpg" />
+    <Content Include="design_images\projects\v5-1.jpg" />
+    <Content Include="design_images\projects\v5-2.jpg" />
+    <Content Include="design_images\projects\v5-3.jpg" />
+    <Content Include="design_images\projects\v5-4.jpg" />
+    <Content Include="design_images\projects\v5-5.jpg" />
+    <Content Include="design_images\projects\v5-6.jpg" />
+    <Content Include="design_images\projects\v5-7.jpg" />
+    <Content Include="design_images\projects\v5-8.jpg" />
+    <Content Include="design_images\projects\v6-1.jpg" />
+    <Content Include="design_images\projects\v6-2.jpg" />
+    <Content Include="design_images\projects\v6-3.jpg" />
+    <Content Include="design_images\projects\v6-4.jpg" />
+    <Content Include="design_images\projects\v6-5.jpg" />
+    <Content Include="design_images\projects\v6-6.jpg" />
+    <Content Include="design_images\projects\v6-7.jpg" />
+    <Content Include="design_images\projects\v6-8.jpg" />
+    <Content Include="design_images\resources\about-image.jpg" />
+    <Content Include="design_images\resources\about-style2-image.jpg" />
+    <Content Include="design_images\resources\appointment-bg.jpg" />
+    <Content Include="design_images\resources\breadcrumb-bg-2.jpg" />
+    <Content Include="design_images\resources\breadcrumb-bg.jpg" />
+    <Content Include="design_images\resources\featured-1-overlay.png" />
+    <Content Include="design_images\resources\featured-1.png" />
+    <Content Include="design_images\resources\featured-2-overlay.png" />
+    <Content Include="design_images\resources\featured-2.png" />
+    <Content Include="design_images\resources\featured-3-overlay.png" />
+    <Content Include="design_images\resources\featured-3.png" />
+    <Content Include="design_images\resources\history-1.jpg" />
+    <Content Include="design_images\resources\history-2.jpg" />
+    <Content Include="design_images\resources\instagram-1.jpg" />
+    <Content Include="design_images\resources\instagram-2.jpg" />
+    <Content Include="design_images\resources\instagram-3.jpg" />
+    <Content Include="design_images\resources\instagram-4.jpg" />
+    <Content Include="design_images\resources\instagram-5.jpg" />
+    <Content Include="design_images\resources\instagram-6.jpg" />
+    <Content Include="design_images\resources\logo-2.png" />
+    <Content Include="design_images\resources\logo.png" />
+    <Content Include="design_images\resources\map.png" />
+    <Content Include="design_images\resources\working-1.jpg" />
+    <Content Include="design_images\resources\working-2.jpg" />
+    <Content Include="design_images\resources\working-3.jpg" />
+    <Content Include="design_images\resources\working-v2-1.jpg" />
+    <Content Include="design_images\resources\working-v2-2.jpg" />
+    <Content Include="design_images\resources\working-v2-3.jpg" />
+    <Content Include="design_images\resources\working-v2-4.jpg" />
+    <Content Include="design_images\services\1.jpg" />
+    <Content Include="design_images\services\2.jpg" />
+    <Content Include="design_images\services\3.jpg" />
+    <Content Include="design_images\services\4.jpg" />
+    <Content Include="design_images\services\service-single\how-work.jpg" />
+    <Content Include="design_images\services\service-single\pricing-1.jpg" />
+    <Content Include="design_images\services\service-single\pricing-2.jpg" />
+    <Content Include="design_images\services\service-single\single-service-1.jpg" />
+    <Content Include="design_images\services\v2-1.jpg" />
+    <Content Include="design_images\services\v2-2.jpg" />
+    <Content Include="design_images\services\v2-3.jpg" />
+    <Content Include="design_images\services\v2-4.jpg" />
+    <Content Include="design_images\services\v2-5.jpg" />
+    <Content Include="design_images\services\v2-6.jpg" />
+    <Content Include="design_images\shop\1.jpg" />
+    <Content Include="design_images\shop\2.jpg" />
+    <Content Include="design_images\shop\3.jpg" />
+    <Content Include="design_images\shop\4.jpg" />
+    <Content Include="design_images\shop\5.jpg" />
+    <Content Include="design_images\shop\6.jpg" />
+    <Content Include="design_images\shop\7.jpg" />
+    <Content Include="design_images\shop\8.jpg" />
+    <Content Include="design_images\shop\9.jpg" />
+    <Content Include="design_images\shop\product-thumb-1.jpg" />
+    <Content Include="design_images\shop\product-thumb-2.jpg" />
+    <Content Include="design_images\shop\review-1.png" />
+    <Content Include="design_images\shop\review-2.png" />
+    <Content Include="design_images\shop\single-product.jpg" />
+    <Content Include="design_images\sidebar\instagram-1.jpg" />
+    <Content Include="design_images\sidebar\instagram-2.jpg" />
+    <Content Include="design_images\sidebar\instagram-3.jpg" />
+    <Content Include="design_images\sidebar\instagram-4.jpg" />
+    <Content Include="design_images\sidebar\instagram-5.jpg" />
+    <Content Include="design_images\sidebar\instagram-6.jpg" />
+    <Content Include="design_images\sidebar\popular-product-1.jpg" />
+    <Content Include="design_images\sidebar\popular-product-2.jpg" />
+    <Content Include="design_images\sidebar\popular-product-3.jpg" />
+    <Content Include="design_images\sidebar\recent-post-1.jpg" />
+    <Content Include="design_images\sidebar\recent-post-2.jpg" />
+    <Content Include="design_images\sidebar\recent-post-3.jpg" />
+    <Content Include="design_images\slides\v1-1.jpg" />
+    <Content Include="design_images\slides\v1-2.jpg" />
+    <Content Include="design_images\slides\v1-3.jpg" />
+    <Content Include="design_images\slides\v2-1.jpg" />
+    <Content Include="design_images\slides\v2-2.jpg" />
+    <Content Include="design_images\slides\v2-3.jpg" />
+    <Content Include="design_images\slides\v3-1.jpg" />
+    <Content Include="design_images\slides\v3-2.jpg" />
+    <Content Include="design_images\slides\v3-3.jpg" />
+    <Content Include="design_images\team\1.jpg" />
+    <Content Include="design_images\team\2.jpg" />
+    <Content Include="design_images\team\3.jpg" />
+    <Content Include="design_images\team\v2-1.jpg" />
+    <Content Include="design_images\team\v2-2.jpg" />
+    <Content Include="design_images\team\v2-3.jpg" />
+    <Content Include="design_images\team\v2-4.jpg" />
+    <Content Include="design_images\testimonial\testi-1.png" />
+    <Content Include="design_images\testimonial\testi-2.png" />
+    <Content Include="design_images\testimonial\testi-3.png" />
+    <Content Include="design_images\testimonial\testi-style2-1.png" />
+    <Content Include="design_images\testimonial\testi-style2-2.png" />
+    <Content Include="design_images\testimonial\testi-style2-3.png" />
+    <Content Include="design_images\testimonial\testi-style3-1.png" />
+    <Content Include="design_images\testimonial\testi-style3-2.png" />
+    <Content Include="image\apartment.png" />
+    <Content Include="image\clock_1584942.png" />
+    <Content Include="image\contacts.png" />
+    <Content Include="image\Customise.png" />
+    <Content Include="image\custom_5064661.png" />
+    <Content Include="Global.asax" />
+    <Content Include="home.html" />
+    <Content Include="image\home1.jpg" />
+    <Content Include="image\home2.jpg" />
+    <Content Include="image\independent-home.png" />
+    <Content Include="image\Inv45Day.png" />
+    <Content Include="image\InvCustomise.png" />
+    <Content Include="image\InvVR.png" />
+    <Content Include="image\login.png" />
+    <Content Include="image\logo.png" />
+    <Content Include="image\map.png" />
+    <Content Include="image\message.png" />
+    <Content Include="image\reg.gif" />
+    <Content Include="image\Reg.jpg" />
+    <Content Include="image\reg1.png" />
+    <Content Include="image\regi.png" />
+    <Content Include="image\Slider1.png" />
+    <Content Include="image\Slider2.jpg" />
+    <Content Include="image\Slider2.png" />
+    <Content Include="image\villa.png" />
+    <Content Include="image\vr-camera_8170956.png" />
+    <Content Include="image\VR.png" />
+    <Content Include="login.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="style\home.css" />
+    <Content Include="style\login.css" />
+    <Content Include="style\register.css" />
+    <Content Include="videos\homescreen.mp4" />
+    <Content Include="videos\Login.mp4" />
+    <Content Include="videos\Registration.mp4" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49937</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44384/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

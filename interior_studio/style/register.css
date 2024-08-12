@@ -1,0 +1,124 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #dbd2d2;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.signup-box {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure the rounded corners are visible */
+}
+
+.signup-form {
+    width: 50%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden; /* Ensure the rounded corners are visible */
+    background: white; /* Optional: Add a background color for better contrast */
+}
+
+    .video-section video {
+        width: 80%; /* Adjust as needed */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Border radius for the video */
+        object-fit: cover;
+    }
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background: #f9f9f9;
+}
+
+    .input-container .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.signup-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .signup-btn:hover {
+        background-color: #0056b3;
+    }
+.link-section {
+    position: absolute;
+    bottom: 60px;
+    left: 70%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .link-section p {
+        margin: 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .link-section a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+        .link-section a:hover {
+            text-decoration: underline;
+        }
+
